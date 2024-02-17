@@ -14,11 +14,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: "DAC SDC"
-class_name: DAC System Design Contest 2023
+class_name: DAC System Design Contest 2024
 class_number: DAC SDC
-email: jgoeders@byu.edu
-baseurl: "/2023"
-url: "dac-sdc.github.io"
+email: meng.li@pku.edu.cn
+baseurl: "/dac-sdc-2024"
+url: "pku-sec-lab.github.io"
 
 permalink: pretty
 
