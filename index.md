@@ -19,7 +19,7 @@ The DAC System Design Contest focuses on object detection and classification on 
 ## Links
 
   * [Contest Dates]({% link _pages/schedule.md %})
-  * [Registration](https://docs.google.com/forms/d/e/1FAIpQLScTaWfbbL1VFftSfWqZXJAidesqfg1cMvgg-MKNqtVFLdqcaw/viewform?usp=sf_link) (The contest is open to both industry and academia.)
+  * Registration (TBD) (The contest is open to both industry and academia.)
   * [Participant Info]({% link _pages/info.md %})
   * [Evaluation Metrics]({% link _pages/evaluation.md %})
   * [Submission Instructions]({% link _pages/submission.md %})
