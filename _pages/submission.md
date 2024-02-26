@@ -35,10 +35,9 @@ For the final submission, follow the instructions above. In addition:
 1. Your design must be available, open-source, and in working condition in order to be considered for an award. You are permitted to use publicly available closed source tools and IP (Xilinx's DPU); however, all of your work (any modifications and configurations to commercial, closed-source tools), must be accessible.
 
 ### Submission Links
-* Prelim #1: <https://forms.gle/PbgUfGFmnVgwnkT66>
-* Prelim #2: <https://forms.gle/3xZauRg5GpiGGgz96>
-* Prelim #3: <https://forms.gle/ReQFPAqccoNvUxAE6>
-* Final submission: <https://forms.gle/uk6e7gC6bXRPfamJ7>
+* Prelim #1: (TBD)
+* Prelim #2: (TBD)
+* Final submission: (TBD)
 
 ## GPU Contest
 
@@ -66,7 +65,6 @@ For the final submission, follow the instructions above. In addition:
 1. Your design must be available, open-source, and in working condition in order to be considered for an award. You are permitted to use publicly available closed source tools and GPU; however, all of your work (any modifications and configurations to commercial, closed-source tools), must be accessible.
 
 ### Submission Links
-* Prelim #1: <https://forms.gle/dDonH7h3AsryshFu9>
-* Prelim #2: <https://forms.gle/oBn44ohHxyKPLTFX6>
-* Prelim #3: <https://forms.gle/aKfhp83wHsRfkCmX9> (deadline: June 8th)
-* Final Submission: <https://forms.gle/sSiRqTLo1QN8uSqr5> (deadline: June 14th)
+* Prelim #1: (TBD)
+* Prelim #2: (TBD)
+* Final submission: (TBD)

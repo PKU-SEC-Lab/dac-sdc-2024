@@ -10,7 +10,7 @@ order: 2
 
 ## Registration
 
-* [Registration](TBD) (The contest is open to both industry and academia.)
+* Registration (TBD - The contest is open to both industry and academia.)
 
 
 ## Target Platform 
