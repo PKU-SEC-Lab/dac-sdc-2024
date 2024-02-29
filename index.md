@@ -4,7 +4,7 @@ toc: false
 title: 
 ---
 
-#  {{ site.class_name}}
+# {{ site.class_name}}
 
 The DAC System Design Contest focuses on object detection and classification on an embedded GPU or FPGA system. Contestants will receive a training dataset provided by Baidu, and a hidden dataset will be used to evaluate the performance of the designs in terms of accuracy and speed. Contestants will compete to create the best performing design on a Nvidia Jetson Nano GPU or  Xilinx Kria KV260 FPGA board. Grand cash awards will be given to the top three teams. The award ceremony will be held at the 2024 IEEE/ACM Design Automation Conference.
 
@@ -33,6 +33,11 @@ The DAC System Design Contest focuses on object detection and classification on 
   * Qi Sun - Zhejiang University
   * Sitao Huang - University of California Irvine
   * Atefeh Sohrabizadeh - University of California Los Angeles
+  * Peng Cao - National Center of Technology Innovation for EDA, Southeast University
+
+## Submission Evaluation Committee
+  * Qi Sun - Zhejiang University
+  * Sitao Huang - University of California Irvine
 
 ## Sponsors
 
@@ -40,4 +45,4 @@ The DAC System Design Contest focuses on object detection and classification on 
 
 <img src="{% link media/baidu.png %}" width="400">
 
-<img src="{% link media/pkueda.svg %}" width="400">
+<img src="{% link media/eda_center.jpg %}" width="400">
