@@ -69,6 +69,7 @@ The hidden test dataset contains 6000 images.  The images have varied size, with
 ### Previous Contest Winning Designs
 *Note:* These are designs for the FPGA contest, and were for a different image detection problem/dataset than this year.
 
+  * 2023: <https://github.com/PKU-SEC-Lab/dac-sdc-2023-designs>
   * 2022: <https://github.com/jgoeders/dac_sdc_2022_designs>
   * 2021: <https://github.com/jgoeders/dac_sdc_2021_designs>
   * 2020: <https://github.com/jgoeders/dac_sdc_2020_designs>
