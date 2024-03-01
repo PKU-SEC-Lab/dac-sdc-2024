@@ -54,6 +54,25 @@ The training dataset contains:
 |6|Green Traffic Light|<img src="{% link media/dataset/green_light.png %}"> | Bounding Box |
 |7|Off Traffic Light|<img src="{% link media/dataset/off_light.png %}"> | Bounding Box |
 
+ * Segmentation types
+
+| Type | Name | Example | Identifying Data |
+|------|------|---------|------------------|
+|8|Solid lane line | <img src="{% link media/dataset/Solid_lane_line.png %}"> | segment connected component |
+|9|Dotted lane line | <img src="{% link media/dataset/Dotted_lane_line.png %}"> | segment connected component |
+|10|Crosswalk | <img src="{% link media/dataset/Crosswalk.png %}"> | segment connected component |
+
+ * Label descriptions
+
+| Attribute | Field type | Meaning | Example |
+|------|------|---------|------------------|
+|type| Int | type number (value range 1-10) | 1 |
+| x | Float | Abscissa of upper left corner of bounding box | 100.00 |
+| y | Float | Ordinate of upper left corner of bounding box | 110.00 |
+| width | Float | Width of bounding box | 40.00 |
+| height | Float | Height of bounding box | 60.00 |
+| segmentation | [polygon] | Segment type connected component. Only type 8-10 have values. Two consecutive numbers represent the coordinate of a point| [[100.00, 110.00, 101.00,111.00...]] |
+
 ## Test Dataset
 The hidden test dataset contains 6000 images.  The images have varied size, with the following distribution of sizes:
   * 1920x1080: 3788 images
