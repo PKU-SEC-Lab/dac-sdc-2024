@@ -60,6 +60,7 @@ The hidden test dataset contains 6000 images.  The images have varied size, with
   * 1280x720: 1932 images
   * 1920x1088: 243 images
   * 1920x1072: 37 images
+*Note we will only use 3000 images for the preliminary submissions and use all 6000 images for the final evaluation. All the designs will be evaluated based on Batch Size = 1.*
 
 ## Other Info
 
@@ -67,7 +68,7 @@ The hidden test dataset contains 6000 images.  The images have varied size, with
   * [FAQs]({% link _pages/faq.md %})
 
 ### Previous Contest Winning Designs
-*Note:* These are designs for the FPGA contest, and were for a different image detection problem/dataset than this year.
+*Note:* These are designs for the GPU and FPGA contest, and were for a different image detection problem/dataset than this year.
 
   * 2023: <https://github.com/PKU-SEC-Lab/dac-sdc-2023-designs>
   * 2022: <https://github.com/jgoeders/dac_sdc_2022_designs>
