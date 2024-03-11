@@ -79,7 +79,8 @@ The hidden test dataset contains 6000 images.  The images have varied size, with
   * 1280x720: 1932 images
   * 1920x1088: 243 images
   * 1920x1072: 37 images
-*Note we will only use 3000 images for the preliminary submissions and use all 6000 images for the final evaluation. All the designs will be evaluated based on Batch Size = 1.*
+
+*Note we will only use 3000 images for the preliminary submissions and use all 6000 images for the final evaluation. All the designs (including latency and accuracy) will be evaluated based on Batch Size = 1.*
 
 ## Other Info
 
