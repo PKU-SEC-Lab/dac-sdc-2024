@@ -21,8 +21,6 @@ recall = global_true_positives / (global_true_positives + global_false_negatives
 
 True positives are when a reported object matches the type and location (IoU > 0.5) of an object from the golden data.
 
-Average Hausdorff Distance is used as the segmentation performance metric. 
-
 <del>The minimum accuracy should be **TBD**, otherwise a penalty is applied.</del>
 
 ### THROUGHPUT
