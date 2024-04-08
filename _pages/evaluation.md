@@ -21,6 +21,8 @@ recall = global_true_positives / (global_true_positives + global_false_negatives
 
 True positives are when a reported object matches the type and location (IoU > 0.5) of an object from the golden data.
 
+Average Hausdorff Distance is used as the segmentation performance metric. 
+
 <del>The minimum accuracy should be **TBD**, otherwise a penalty is applied.</del>
 
 ### THROUGHPUT
@@ -36,4 +38,4 @@ team score = F1-score^2 * fps
 
 ### Scoring Script
 
-A [score.py](https://github.com/dac-sdc/fpga_starter_2023/blob/main/scripts/score.py) script is provided that will provide f1-score and fps.
+A <del>[score.py](https://github.com/dac-sdc/fpga_starter_2023/blob/main/scripts/score.py) </del> [score.py](./score.py)script is provided that will provide f1-score and fps.
