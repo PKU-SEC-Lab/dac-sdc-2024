@@ -38,4 +38,4 @@ team score = F1-score^2 * fps
 
 ### Scoring Script
 
-A <del>[score.py](https://github.com/dac-sdc/fpga_starter_2023/blob/main/scripts/score.py) </del> [score.py](./score.py)script is provided that will provide f1-score and fps.
+A <del>[score.py](https://github.com/dac-sdc/fpga_starter_2023/blob/main/scripts/score.py) </del> script is provided that will provide f1-score and fps.
