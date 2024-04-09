@@ -21,6 +21,7 @@ recall = global_true_positives / (global_true_positives + global_false_negatives
 
 True positives are when a reported object matches the type and location (IoU > 0.5) of an object from the golden data.
 
+mIoU is used to measure the segmentation performance. 
 <del>The minimum accuracy should be **TBD**, otherwise a penalty is applied.</del>
 
 ### THROUGHPUT
@@ -31,9 +32,9 @@ Throughput is measured in FPS.  The time to read images from the SD card is not 
 ### SCORING FUNCTION
 The score for a team is calculated as follows **(Subject to change)**:
 
-team score = F1-score^2 * fps
-
+<del>team score = F1-score^2 * fps </del>
+team score = (F1-score^2 + mIoU^2) * fps
 
 ### Scoring Script
 
-A <del>[score.py](https://github.com/dac-sdc/fpga_starter_2023/blob/main/scripts/score.py) </del> script is provided that will provide f1-score and fps.
+A [score_miou.py](https://github.com/PKU-SEC-Lab/dac-sdc-2024/tree/main/media/score_miou.py) script is provided that will provide f1-score, mIoU and fps.
