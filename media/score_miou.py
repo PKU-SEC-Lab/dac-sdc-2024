@@ -106,6 +106,7 @@ def get_closest_object(golden_object, candidate_user_objects):
 
 
 def segmentation_to_mask(segmentation, image_shape):
+    """将分割数据转换为掩码。"""
     mask = np.zeros(image_shape, dtype=np.uint8)
     if segmentation:
         for seg in segmentation:
@@ -114,6 +115,7 @@ def segmentation_to_mask(segmentation, image_shape):
     return mask
 
 def calculate_mask_iou(mask1, mask2):
+    """计算两个掩码之间的IoU。"""
     intersection = np.logical_and(mask1, mask2).sum()
     union = np.logical_or(mask1, mask2).sum()
     return intersection / union if union else 0
@@ -166,8 +168,8 @@ def score_group(group, label_dir_path, debug):
         user_data = result_data["objects"][filename]
 
         for labelled_object in golden_data:
-            if labelled_object["type"] >= 8:
-                continue
+            # if labelled_object["type"] >= 8:
+            #     continue
 
             user_object, iou = get_closest_object(labelled_object, user_data)
 
@@ -235,7 +237,7 @@ def score_group(group, label_dir_path, debug):
 
     if all_ious:
         mean_miou = sum(all_ious) / len(all_ious)
-        print(f"Mean Intersection over Union (mIoU): {mean_miou:.4f}")
+        print(f"mIoU: {mean_miou:.4f}")
     else:
         print("No segmentation data available for scoring.")
 
