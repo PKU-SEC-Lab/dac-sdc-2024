@@ -106,7 +106,6 @@ def get_closest_object(golden_object, candidate_user_objects):
 
 
 def segmentation_to_mask(segmentation, image_shape):
-    """将分割数据转换为掩码。"""
     mask = np.zeros(image_shape, dtype=np.uint8)
     if segmentation:
         for seg in segmentation:
@@ -115,7 +114,6 @@ def segmentation_to_mask(segmentation, image_shape):
     return mask
 
 def calculate_mask_iou(mask1, mask2):
-    """计算两个掩码之间的IoU。"""
     intersection = np.logical_and(mask1, mask2).sum()
     union = np.logical_or(mask1, mask2).sum()
     return intersection / union if union else 0
