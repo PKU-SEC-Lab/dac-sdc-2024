@@ -106,6 +106,7 @@ def get_closest_object(golden_object, candidate_user_objects):
 
 
 def segmentation_to_mask(segmentation, image_shape):
+
     mask = np.zeros(image_shape, dtype=np.uint8)
     if segmentation:
         for seg in segmentation:
@@ -114,9 +115,29 @@ def segmentation_to_mask(segmentation, image_shape):
     return mask
 
 def calculate_mask_iou(mask1, mask2):
+
     intersection = np.logical_and(mask1, mask2).sum()
     union = np.logical_or(mask1, mask2).sum()
     return intersection / union if union else 0
+
+def get_closest_seg_object(golden_object, candidate_user_objects):
+
+    max_seg_iou = 0
+    max_seg_iou_object = None
+    for user_object in candidate_user_objects:
+        if "segmentation" in golden_object and golden_object["segmentation"] and "segmentation" in user_object and user_object["segmentation"] and (user_object["type"] == golden_object["type"]):
+            mask_golden = segmentation_to_mask(golden_object["segmentation"], (1024, 1024)) 
+            mask_user = segmentation_to_mask(user_object["segmentation"], (1024, 1024))
+            mask_iou = calculate_mask_iou(mask_golden, mask_user)
+            # print(mask_iou)
+        else:
+            mask_iou = -1
+
+        if mask_iou > max_seg_iou:
+            max_seg_iou = mask_iou
+            max_seg_iou_object = user_object
+
+    return max_seg_iou_object, max_seg_iou
 
 
 
@@ -166,10 +187,13 @@ def score_group(group, label_dir_path, debug):
         user_data = result_data["objects"][filename]
 
         for labelled_object in golden_data:
-            # if labelled_object["type"] >= 8:
-            #     continue
-
-            user_object, iou = get_closest_object(labelled_object, user_data)
+            if labelled_object["type"] >= 8:
+                seg_user_object, max_seg_iou = get_closest_seg_object(labelled_object, user_data)
+                all_ious.append(max_seg_iou)               
+                if seg_user_object:
+                    # print("seg object:", seg_user_object)
+                    user_data.remove(seg_user_object)
+                continue
 
             if debug:
                 print("  Golden object:", labelled_object)
@@ -192,12 +216,6 @@ def score_group(group, label_dir_path, debug):
                 false_negatives += 1
                 if debug:
                     print("    IoU <= 0.5, false negative")
-
-            if "segmentation" in labelled_object and labelled_object["segmentation"] and "segmentation" in user_object and user_object["segmentation"]:
-                mask_golden = segmentation_to_mask(labelled_object["segmentation"], (1024, 1024)) 
-                mask_user = segmentation_to_mask(user_object["segmentation"], (1024, 1024))
-                mask_iou = calculate_mask_iou(mask_golden, mask_user)
-                all_ious.append(mask_iou)
 
         # False positives are any objects left in the user's results that have type between 1 and 7
         false_positives = len([o for o in user_data if o["type"] >= 1 and o["type"] <= 7])
