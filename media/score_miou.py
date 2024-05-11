@@ -126,8 +126,8 @@ def get_closest_seg_object(golden_object, candidate_user_objects):
     max_seg_iou_object = None
     for user_object in candidate_user_objects:
         if "segmentation" in golden_object and golden_object["segmentation"] and "segmentation" in user_object and user_object["segmentation"] and (user_object["type"] == golden_object["type"]):
-            mask_golden = segmentation_to_mask(golden_object["segmentation"], (1024, 1024)) 
-            mask_user = segmentation_to_mask(user_object["segmentation"], (1024, 1024))
+            mask_golden = segmentation_to_mask(golden_object["segmentation"], (3000, 3000)) 
+            mask_user = segmentation_to_mask(user_object["segmentation"], (3000, 3000))
             mask_iou = calculate_mask_iou(mask_golden, mask_user)
             # print(mask_iou)
         else:
