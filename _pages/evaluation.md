@@ -37,6 +37,8 @@ The score for a team is calculated as follows **(Subject to change)**:
 
 team score = (F1-score^2 + mIoU^2) * fps
 
+**Note** that for fairness, all valid submissions must meet the requirements: F1 >= 0.25, mIoU >= 0.15. 
+
 ### Scoring Script
 
 A [score_miou.py](https://github.com/PKU-SEC-Lab/dac-sdc-2024/tree/main/media/score_miou.py) script is provided that will provide f1-score, mIoU and fps.
