@@ -31,11 +31,4 @@ Did not run successfully:
 | 4    | AlphaChip     | 0.733         | 0.785  | 0.758        | 1.10  | 0.4264 | 0.8316      |
 | 5    | FSBIN         | 0.000         | 0.0    | 0            | 7.94  | 0.2045 | 0.3318      |
 | 6    | Redbrain      | 0.247         | 0.006  | 0.013        | 8.17  | 0.0000 | 0.0013      |
-
-#### Bug
-
-1. T-IMI
-
-   ```
-   Fail: [ONNXRuntimeError] : 1 : FAIL : Load model from ./prune.onnx failed:/onnxruntime_src/onnxruntime/core/graph/model_load_utils.h:47 void onnxruntime::model_load_utils::ValidateOpsetForDomain(const std::unordered_map<std::basic_string<char>, int>&, const onnxruntime::logging::Logger&, bool, const string&, int) ONNX Runtime only *guarantees* support for models stamped with official released onnx opset versions. Opset 17 is under development and support for this is limited. The operator schemas and or other functionality may change before next ONNX release and in this case ONNX Runtime will not guarantee backward compatibility. Current official support for domain ai.onnx is till opset 15.
-   ```
+| 7    | T-IMI         | 0.014         | 0.008  | 0.01         | 0.86  | 0.0043 | 0.0001      |
