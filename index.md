@@ -44,6 +44,4 @@ The DAC System Design Contest focuses on object detection and classification on 
 
 <img src="{% link media/AMD_E_Blk_RGB.png %}" width="400">
 
-<img src="{% link media/baidu.png %}" width="400">
-
 <img src="{% link media/eda_center.jpg %}" width="600">
